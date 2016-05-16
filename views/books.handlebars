@@ -1,0 +1,25 @@
+<h2>Books</h2>
+
+{{#each bookposts}}
+	<p>submitted by <a href="{{youlink}}" target="_blank">{{youname}}</a></p>
+	<p><em>{{title}}</em> by {{author}}</p>
+	<p><a href="{{shopurl}}" target="_blank"><img src="{{imgurl}}" /></a></p>
+	<p>{{description}}</p>
+	<p><strong>Best time/place for reading (add radio buttons w/ Other textarea later):</strong></p>
+	<p>{{readingsitch}}</p>
+	<br/>
+{{/each}}
+
+<form method="post" action="/bookpost/{{_id}}">
+	<p>Who are you?</p> <input type="text" name="youname" /></p>
+	<p>Link to you?</p><input type="text" name="youlink" /></p>
+	<p>Title: <input type="text" name="title" /></p>
+	<p>Author: <input type="text" name="author" /></p>
+	<p>Description:</p>
+	<textarea name="description"></textarea><br>
+	<p>Image URL: <input type="text" name="imgurl" /></p>
+	<p>Shopping link: <input type="text" name="shopurl" /></p>
+	<p>When and where do you like to read this?</p>
+	<textarea name="readingsitch"></textarea><br>
+	<input type="submit" />
+</form>

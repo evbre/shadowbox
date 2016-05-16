@@ -1,0 +1,26 @@
+<h2>Kitchen</h2>
+
+{{#each kitchenposts}}
+	<p>submitted by <a href="{{youlink}}" target="_blank">{{youname}}</a></p>
+	<p><em>{{title}}</em></p>
+	<p><a href="{{shopurl}}" target="_blank"><img src="{{imgurl}}" /></a></p>
+	<p>{{description}}</p>
+	<p><strong>What I like to cook with this:</strong></p>
+	<p>{{foods}}</p>
+	<br/>
+{{/each}}
+
+<form method="post" action="/kitchenpost">
+	<p>Who are you?</p> <input type="text" name="youname" /></p>
+	<p>Link to you?</p><input type="text" name="youlink" /></p>
+	<p>Item: <input type="text" name="title" /></p>
+	<p>Description:</p>
+	<textarea name="description"></textarea><br>
+	<p>Image URL: <input type="text" name="imgurl" /></p>
+	<p>Shopping link: <input type="text" name="shopurl" /></p>
+	<p>What do you cook with this?</p>
+	<textarea name="foods"></textarea><br>
+	<input type="submit" />
+</form>
+
+<h2><a href="/">home</a></h2>
