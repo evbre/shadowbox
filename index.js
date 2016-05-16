@@ -95,7 +95,7 @@ app.post('/wardrobepost',function(req, res){
 	occasion: req.body.occasion, 
 }).save(function(err){
 		if (err){ console.log(err);}
-		res.redirect('/books'); 
+		res.redirect('/wardrobe'); 
 	});
 });
 
