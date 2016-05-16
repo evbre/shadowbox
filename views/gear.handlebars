@@ -1,30 +1,29 @@
 <div class="subform">
 <div class="page">
-<form method="post" action="/bookpost">
+<form method="post" action="/gearpost">
 	<p>Your Name:</p> <input type="text" name="youname" /></p>
 	<p>Your Site:</p><input type="text" name="youlink" /></p>
-	<p>Title: <input type="text" name="title" /></p>
-	<p>Author: <input type="text" name="author" /></p>
+	<p>Item: <input type="text" name="title" /></p>
 	<p>Description:</p>
 	<textarea name="description"></textarea><br>
 	<p>Image URL: <input type="text" name="imgurl" /></p>
 	<p>Shopping link: <input type="text" name="shopurl" /></p>
-	<p>Best time/place/occasion to read this:</p>
-	<textarea name="readingsitch"></textarea><br>
+	<p>Uses: <input type="text" name="uses" /></p>
+	<p>What other gear does it interact with? <input type="text" name="interacts" /></p>
 	<input type="submit" class="submitbutton"/>
 </form>
 </div>
 </div>
 
 <div class="displayboard">
-{{#each bookposts}}
-<div class="page">
+{{#each gearposts}}
+    <div class="page">
 	<p>submitted by <a href="{{youlink}}" target="_blank">{{youname}}</a></p>
-	<p><em>{{title}}</em> by {{author}}</p>
+	<p>{{title}}</p>
 	<p><a href="{{shopurl}}" target="_blank"><img src="{{imgurl}}" /></a></p>
 	<p>{{description}}</p>
-	<p>When/where to read this book:</p>
-	<p>{{readingsitch}}</p>
+	<p>Uses: {{uses}}</p>
+	<p>Interacts with: {{interacts}}</p>
 	</div>
 {{/each}}
 </div>

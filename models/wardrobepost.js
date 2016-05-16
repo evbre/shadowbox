@@ -5,7 +5,6 @@ var wardrobepostSchema = mongoose.Schema({
             type:Date,
             default:Date.now
         },
-        wardrobeposts:[{
         youname: String,
         youlink: String,
         title: String,      
@@ -14,7 +13,6 @@ var wardrobepostSchema = mongoose.Schema({
         shopurl: String,
         season: String,
         occasion: String,
-    }]
 });
 
 var wardrobePost = mongoose.model('wardrobePost', wardrobepostSchema);

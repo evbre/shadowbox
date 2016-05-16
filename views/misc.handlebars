@@ -1,28 +1,27 @@
 <div class="subform">
 <div class="page">
-<form method="post" action="/wardrobe">
+<form method="post" action="/miscpost">
 	<p>Your Name:<input type="text" name="youname" /></p>
 	<p>Your Site:<input type="text" name="youlink" /></p>
-	<p>Wardrobe Item:<input type="text" name="title" /></p>
+	<p>Item:<input type="text" name="title" /></p>
 	<p>Description of item:</p>
 	<textarea name="description"></textarea><br>
 	<p>Image URL:<input type="text" name="imgurl" /></p>
 	<p>Shopping link:<input type="text" name="shopurl" /></p>
-	<p>Season:<input type="text" name="season" /></p>
-	<p>Occasion:<input type="text" name="occasion" /></p>
 	<input type="submit" class="submitbutton"/>
 </form>
 </div>
 </div>
+
 <div class="displayboard">
-{{#each wardrobeposts}}
+{{#each miscposts}}
     <div class="page">
 	<p>submitted by <a href="{{youlink}}" target="_blank">{{youname}}</a></p>
 	<p><em>{{title}}</em></p>
 	<p><a href="{{shopurl}}" target="_blank"><img src="{{imgurl}}" /></a></p>
 	<p>{{description}}</p>
-	<p>Season: {{season}}</p>
-	<p>Occasion: {{occasion}}</p>
-    </div>
+	</div>
 {{/each}}
 </div>
+
+

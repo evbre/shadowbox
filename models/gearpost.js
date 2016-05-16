@@ -1,6 +1,6 @@
 var mongoose = require('mongoose');
 
-var bookpostSchema = mongoose.Schema({
+var gearpostSchema = mongoose.Schema({
         datetime: {
             type:Date,
             default:Date.now
@@ -8,12 +8,12 @@ var bookpostSchema = mongoose.Schema({
         youname: String,
         youlink: String,
         title: String,      
-        author: String,
         description: String,
         imgurl: String,
         shopurl: String,
-        readingsitch: String
+        uses: String,
+        interacts: String,
 });
 
-var bookPost = mongoose.model('bookPost', bookpostSchema);
-module.exports = bookPost;
+var gearPost = mongoose.model('gearPost', gearpostSchema);
+module.exports = gearPost;
